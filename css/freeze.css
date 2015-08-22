@@ -1133,3 +1133,13 @@ img.android-wrapper {
 #demo .container p {
   text-align: center;
 }
+
+.btn-white {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
