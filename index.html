@@ -1,0 +1,518 @@
+<!doctype html>
+<!--[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+    <!--<![endif]-->
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Android Overlay Protector | GeeksOnSecurity</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+    
+        <link rel="stylesheet" href="css/bootstrap.css">
+
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="js/rs-plugin/css/settings.css">
+
+        <link rel="stylesheet" href="css/freeze.css">
+
+        <link rel="stylesheet" href="css/ladda-themeless.min.css">
+
+        <script type="text/javascript" src="js/modernizr.custom.32033.js"></script>
+
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div class="pre-loader">
+            <div class="load-con">
+                <img src="img/logo_512.png" class="animated fadeInDown" alt="">
+                <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+            </div>
+        </div>
+
+        <header>
+
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="fa fa-bars fa-lg"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                            <img src="img/logo_96.png" alt="" class="logo">
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">home</a>
+                            </li>
+                            <li>
+                                <a href="#howitworks">how it works</a>
+                            </li>
+                            <li><a href="#features">features</a>
+                            </li>
+                            <li><a href="#example">example</a>
+                            </li>
+                            <li><a href="#screens">screens</a>
+                            </li>
+                            <li><a href="#press">press</a>
+                            </li>
+                            <li><a href="#demo">video</a>
+                            </li>
+                            <li><a href="#support">support</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-->
+            </nav>
+
+
+            <!--RevSlider-->
+            <div class="tp-banner-container">
+                <div class="tp-banner" >
+                    <ul>
+                        <!-- SLIDE  -->
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
+                            <!-- MAIN IMAGE -->
+                            <img src="img/transparent.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                            <!-- LAYERS -->
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption lfl fadeout hidden-xs"
+                                 data-x="left"
+                                 data-y="bottom"
+                                 data-hoffset="30"
+                                 data-voffset="0"
+                                 data-speed="500"
+                                 data-start="700"
+                                 data-easing="Power4.easeOut">
+                                <img src="img/android_prospective.png" alt="">
+                            </div>
+
+                            <div class="tp-caption large_white_bold sft" data-x="550" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
+                                Android
+                            </div>
+                            <div class="tp-caption large_white_light sfr" data-x="550" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1400" data-easing="Power4.easeOut">
+        
+                            </div>
+                            <div class="tp-caption large_white_light sfb" data-x="550" data-y="center" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1500" data-easing="Power4.easeOut">
+                                Overlay Protector
+                            </div>
+
+                            <div class="tp-caption sfb hidden-xs" data-x="550" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1000" data-start="1700" data-easing="Power4.easeOut">
+                                <a href="#howitworks" class="btn btn-primary inverse btn-lg">LEARN MORE</a>
+                            </div>
+                            <div class="tp-caption sfr hidden-xs" data-x="730" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1500" data-start="1900" data-easing="Power4.easeOut">
+                              <a href="https://play.google.com/store/apps/details?id=com.geeksonsecurity.android.overlayprotector" class="btn btn-primary inverse scrollpoint sp-effect1">
+                                <i class="fa fa-android fa-3x pull-left"></i>
+                                <span>Download for</span><br>
+                                <b>Android</b>
+                              </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="wrapper">
+            <section id="howitworks">
+              <div class="container">
+                <div class="section-heading inverse scrollpoint sp-effect3">
+                  <h1>How it works</h1>
+                  <div class="divider"></div>
+                  <p>How does our application protects you against overlay attacks?</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2 scrollpoint sp-effect2">
+                    <p>
+                        Android market share has now reached almost 75% (<a href="https://en.wikipedia.org/wiki/Android_(operating_system)#Market_share">source</a>) of the estimated total number of smartphones.
+                        Because of this, criminals are now focusing more and more on this platform, profiting also from the weak permission management implemented in Android. 
+                    </p>
+                    <p>
+                        The issue we are trying to address with this product is called "Application Overlay" and permits an attacker to draw on top of any window and application running on the infected device.
+                        Firstly malicious applications monitor which applications are started by the user on the infected system. 
+                        Next, once they detected a sensible application (eBanking, VPN, ...), the malware will redraw an exact login screen on top of the legitimate one.
+                        The user is incapable of distinguish the fake from the original and enters the credentials on the wrong dialog.
+                        The malware generally upload the stolen credentials to its Command & Control server. To learn more on how this vulnerability works check the articles in the <a href="#press">press</a> section.
+                    </p>
+                    <p>
+                        To avoid such attacks, our application constantly monitor every user-interface (UI) change happening on the device.
+                        Our detection engine will then check if the view element drawn on the screen is coming from the same package of the <strong>legitimate</strong> application started by the user.
+                        If is not, our application will warn you about it and let you decide if you want to whitelist the potentially malicious application or uninstall it.
+                        Be careful, not every application which uses this feature want to steal your data. 
+                        For example, Facebook Messenger application uses this to draw the last received messages on top of the screen.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </section>
+            
+            <section id="features">
+                <div class="container">
+                    <div class="section-heading scrollpoint sp-effect3">
+                        <h1>Features</h1>
+                        <div class="divider"></div>
+                        <p>This is what you get!</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 scrollpoint sp-effect1">
+                            <div class="media media-left feature">
+                                <a class="pull-right">
+                                    <i class="fa fa-clock-o fa-2x"></i>
+                                </a>
+                                <div class="media-body">
+                                    <h3 class="media-heading">Monitor UI in Realtime</h3>
+                                    Our engine will monitor the user interface (UI) of your Android system in realtime
+                                </div>
+                            </div>
+                            <div class="media media-left feature">
+                                <a class="pull-right">
+                                    <i class="fa fa-check fa-2x"></i>
+                                </a>
+                                <div class="media-body">
+                                    <h3 class="media-heading">Custom Whitelist</h3>
+                                    Easily whitelist application that you know they are not malicious
+                                </div>
+                            </div>
+                            <div class="media media-left feature">
+                                <a class="pull-right">
+                                    <i class="fa fa-history fa-2x"></i>
+                                </a>
+                                <div class="media-body">
+                                    <h3 class="media-heading">History</h3>
+                                    Keep track of all overlays happened
+                                </div>
+                            </div>
+                            <div class="media media-left feature">
+                              <a class="pull-right">
+                                <i class="fa fa-cogs fa-2x"></i>
+                              </a>
+                              <div class="media-body">
+                                <h3 class="media-heading">Adjust to your needs</h3>
+                                Although we tried to reduce false positive to zero, you can always adjust all parameters used by our engine!
+                              </div>
+                            </div>
+
+                            <div class="media media-left feature">
+                              <a class="pull-right">
+                                <i class="fa fa-plug fa-2x"></i>
+                              </a>
+                              <div class="media-body">
+                                <h3 class="media-heading">Won't drain your battery</h3>
+                                You won't even notice a difference!
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4" >
+                            <img src="img/android_front.png" class="img-responsive scrollpoint sp-effect5" alt="">
+                        </div>
+                        <div class="col-md-4 col-sm-4 scrollpoint sp-effect2">
+
+                          <div class="media feature">
+                            <a class="pull-left">
+                              <i class="fa fa-shield fa-2x"></i>
+                            </a>
+                            <div class="media-body">
+                              <h3 class="media-heading">Warning</h3>
+                              When something bad happens, you will be notified before its too late!
+                            </div>
+                          </div>
+                            <div class="media feature">
+                                <a class="pull-left">
+                                    <i class="fa fa-remove fa-2x"></i>
+                                </a>
+                                <div class="media-body">
+                                    <h3 class="media-heading">Uninstall malware right away</h3>
+                                    When detected, malicious application can be uninstalled (or whitelisted) directly from the warning dialog
+                                </div>
+                            </div>
+                            <div class="media feature">
+                              <a class="pull-left">
+                                <i class="fa fa-user-secret fa-2x"></i>
+                              </a>
+                              <div class="media-body">
+                                <h3 class="media-heading">Suspected Apps</h3>
+                                The applications shows a list of all applications that could potentially perform an overlay attack based on the their asked permissions
+                              </div>
+                            </div>
+                            <div class="media active feature">
+                                <a class="pull-left">
+                                    <i class="fa fa-plus fa-2x"></i>
+                                </a>
+                                <div class="media-body">
+                                    <h3 class="media-heading">And much more!</h3>
+                                    Discover them yourself...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="example">
+              <div class="container">
+                <div class="section-heading inverse scrollpoint sp-effect3">
+                  <h1>Example</h1>
+                  <div class="divider"></div>
+                  <p>Wanna try a not so malicious sample?</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2 scrollpoint sp-effect2">
+                    <p>
+                        To better sensibilize the user about the overlay issue in Android, we created a sample malware which shows what can be achieved by malware authors.
+                        The malware sample doesn't steal anything in the end (don't even use the Internet permission) and will only collect the stolen credentials in memory.
+                    </p>
+                    <p>
+                        You can have a look at the source code yourself since its <a href="https://github.com/geeksonsecurity/android-overlay-malware-example">hosted on GitHub</a>!
+                   </p>
+                    <p>
+                        <strong>How it works?</strong><br/>
+                        What this pseudo-malware does is to continuously monitor the foreground process and wait until one known process is started by the user.
+                        With known process is meant a process where the malware has a fake view to inject.<br/>
+                        Our malware currently injects to the following applications: LinkedIn, Skype and Credit Suisse Banking.<br/>
+                    </p>
+                    <p>
+                        <strong>Install</strong><br/>
+                        First you need to download the last APK from the <a href="https://github.com/geeksonsecurity/android-overlay-malware-example/releases">project release page</a>.
+                        If you prefer, you can clone the source and build the package yourself.
+                 
+                        Since the package is not coming from Google Play, you need to enable the <i>"Unknown sources"</i> flag in the Security Settings of the device.
+                        This last step is only required if you are deploying to a real device, emulators normally allows install of untrusted apps by default.                        
+                        To install on a real device, you can issue the following command:
+                        <pre># adb install -r android-overlay-malware-example-X_X.apk</pre>
+                        or just upload/download it from a cloud storage and install it directly on the phone.
+                        You should then find the Demo Malware application in the application list.
+                        Per default the malware will try to inject to all supported application, you can change this behaviour by adjusting the settings directly within the application.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </section>
+
+            <section id="screens">
+                <div class="container">
+
+                    <div class="section-heading scrollpoint sp-effect3">
+                        <h1>Screens</h1>
+                        <div class="divider"></div>
+                        <p>See what’s included in the App</p>
+                    </div>
+
+                    <div class="filter scrollpoint sp-effect3">
+                        <a href="javascript:void(0)" class="button js-filter-all active">All Screens</a>
+                        <a href="javascript:void(0)" class="button js-filter-one">Home</a>
+                        <a href="javascript:void(0)" class="button js-filter-two">Whitelist</a>
+                        <a href="javascript:void(0)" class="button js-filter-three">Overlay Detection</a>
+                        <a href="javascript:void(0)" class="button js-filter-four">Suspected Apps</a>
+                        <a href="javascript:void(0)" class="button js-filter-five">Settings</a>
+                    </div>
+                    <div class="slider filtering scrollpoint sp-effect5" >
+                        <div class="one">
+                            <img src="img/screens/home.png" alt="">
+                            <h4>Home</h4>
+                        </div>
+                        <div class="one">
+                            <img src="img/screens/menu.png" alt="">
+                            <h4>Menu</h4>
+                        </div>
+                        <div class="two">
+                            <img src="img/screens/new_whitelist_entry.png" alt="">
+                            <h4>New Whitelist Entry</h4>
+                        </div>
+                        <div class="three">
+                            <img src="img/screens/detected_overlays.png" alt="">
+                            <h4>Detected Overlays</h4>
+                        </div>
+                        <div class="three">
+                            <img src="img/screens/lets_start.png" alt="">
+                            <h4>Start</h4>
+                        </div>
+                        <div class="five">
+                            <img src="img/screens/accept_the_permissions.png" alt="">
+                            <h4>Accept Permissions</h4>
+                        </div>
+                        <div class="five">
+                            <img src="img/screens/settings.png" alt="">
+                            <h4>Settings</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="press">
+              <div class="container">
+                <div class="section-heading inverse scrollpoint sp-effect3">
+                  <h1>In the press</h1>
+                  <div class="divider"></div>
+                  <p>Who talks about this vulnerability?</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2 scrollpoint sp-effect2">
+                    <ul>
+                      <li>
+                        <a href="http://www.cert.pl/news/10180">CERT: Android Malware stealing GMail credentials (with video)</a>
+                      </li>
+                      <li>
+                        <a href="http://www.modzero.ch/modlog/archives/2015/04/01/android_apps_in_sheeps_clothing/index.html">ModZero: Android apps in sheeps clothing</a>
+                      </li>
+                      <li>
+                        <a href="http://conference.hitb.org/hitbsecconf2011kul/materials/D1T1%20-%20Riley%20Hassell%20-%20Exploiting%20Androids%20for%20Fun%20and%20Profit.pdf">Hack in the Box 2011 - Hacking Androids for fun and profits</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </section>
+
+            <section id="demo">
+                <div class="container">
+                    <div class="section-heading scrollpoint sp-effect3">
+                        <h1>Video</h1>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="row">
+                        <p>
+                            <button class="video-loading-btn btn btn-primary ladda-button" data-style="slide-left" data-video="ubs"><i class="fa fa-play"></i> <span class="ladda-label">UBS Overlay</span></button>
+                            <button class="video-loading-btn btn btn-primary ladda-button" data-style="slide-left" data-video="skype"><i class="fa fa-play"></i> <span class="ladda-label">Skype Overlay</span></button>
+                        </p>
+                        <div class="video-wrapper">
+                            <img id="video-image" src="img/ubs_demo.gif" class="android-wrapper" border="0" alt="UBS Overlay Demo" />
+                        </div>
+                      </div>
+                    </div>
+            </section>
+            <section id="support" class="doublediagonal">
+                <div class="container">
+                    <div class="section-heading scrollpoint sp-effect3">
+                        <h1>Support</h1>
+                        <div class="divider"></div>
+                        <p>For more info and support, contact us!</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-8 scrollpoint sp-effect1">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Your name">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Your email">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea cols="30" rows="10" class="form-control" placeholder="Your message"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                    </form>
+                                </div>
+                                <div class="col-md-4 col-sm-4 contact-details scrollpoint sp-effect2">
+                                    <div class="media">
+                                        <a class="pull-left" href="#" >
+                                            <i class="fa fa-map-marker fa-2x"></i>
+                                        </a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Zürich, Switzerland</h4>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <a class="pull-left" href="#" >
+                                            <i class="fa fa-envelope fa-2x"></i>
+                                        </a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">
+                                                <a href="mailto:support@geeksonsecurity.com">support@geeksonsecurity.com</a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <a class="pull-left" href="#" >
+                                            <i class="fa fa-skype fa-2x"></i>
+                                        </a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">geeksonsecurity</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="container">
+                    <a href="#" class="scrollpoint sp-effect3">
+                        <img src="img/logo_96.png" alt="" class="logo">
+                    </a>
+                    <div class="social">
+                        <a href="https://twitter.com/geeksonsecurity" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>
+                        <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-google-plus fa-lg"></i></a>
+                        <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-youtube fa-lg"></i></a>
+                    </div>
+                    <div class="rights">
+                        <p>
+                            Made with &#9829; by <a href="http://www.geeksonsecurity.com" target="_blank">GeeksOnSecurity</a><br/>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/placeholdem.min.js"></script>
+        <script src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+        <script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/spin.min.js"></script>
+        <script src="js/ladda.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                appMaster.preLoader();
+                $(".video-loading-btn").click(function(){
+                    Ladda.stopAll();
+                    var l = Ladda.create(this);
+            	 	l.start();
+                    var videoId = $(this).attr('data-video');
+                    $("#video-image").attr("src", videoId == 'ubs' ? "img/ubs_demo.gif" : "img/skype_demo.gif");
+                    $("#video-image").bind('load', function() {
+                        l.stop();
+                    });
+                    return false;
+                });
+            });
+        </script>
+    </body>
+
+</html>
