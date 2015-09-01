@@ -16,7 +16,7 @@
         <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 
-    
+
         <link rel="stylesheet" href="css/bootstrap.css">
 
         <link rel="stylesheet" href="css/animate.css">
@@ -106,37 +106,37 @@
                             <div class="tp-caption lfl fadeout hidden-xs"
                                  data-x="left"
                                  data-y="bottom"
-                                 data-hoffset="30"
-                                 data-voffset="0"
+                                 data-hoffset="60"
+                                 data-voffset="00"
                                  data-speed="500"
                                  data-start="700"
                                  data-easing="Power4.easeOut">
                                 <img src="img/android_front.png" alt="">
                             </div>
 
-                            <div class="tp-caption large_white_bold sft" data-x="550" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
+                            <div class="tp-caption large_white_bold sft" data-x="450" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
                                 Android
                             </div>
-                            <div class="tp-caption large_white_light sfr" data-x="550" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1400" data-easing="Power4.easeOut">
-        
+                            <div class="tp-caption large_white_light sfr" data-x="450" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1400" data-easing="Power4.easeOut">
+
                             </div>
-                            <div class="tp-caption large_white_light sfb" data-x="550" data-y="center" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1500" data-easing="Power4.easeOut">
+                            <div class="tp-caption large_white_light sfb" data-x="450" data-y="center" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1500" data-easing="Power4.easeOut">
                                 Overlay Protector
                             </div>
 
-                            <div class="tp-caption sfb hidden-xs" data-x="550" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1000" data-start="1700" data-easing="Power4.easeOut">
+                            <div class="tp-caption sfb hidden-xs" data-x="450" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1000" data-start="1700" data-easing="Power4.easeOut">
                                 <a href="#howitworks" class="btn btn-primary inverse btn-lg">LEARN MORE</a>
                             </div>
-                            <div class="tp-caption sfr hidden-xs" data-x="730" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1500" data-start="1900" data-easing="Power4.easeOut">
+                            <div class="tp-caption sfr hidden-xs" data-x="630" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1500" data-start="1900" data-easing="Power4.easeOut">
                               <i>Coming soon to the Google Play Store!</i>
                             </div>
-                            <div class="tp-caption sfr" data-x="550" data-y="center" data-hoffset="0" data-voffset="150" data-speed="1500" data-start="2100" data-easing="Power4.easeOut">
+                            <div class="tp-caption sfr" data-x="450" data-y="center" data-hoffset="0" data-voffset="150" data-speed="1500" data-start="2100" data-easing="Power4.easeOut">
                                 <form class="form-inline" role="form-inline" action="https://geeksonsecurity.us11.list-manage.com/subscribe/post?u=ee3b1f34876814c9883ef8ed1&amp;id=493f87d378" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
                                     <div class="form-group">
                                         <input hidden name="Key" value="us11-ee3b1f34876814c9883ef8ed1-493f87d378"/>
                                         <input type="email" class="form-control" name="EMAIL" placeholder="Your email" style="min-width: 300px;">
                                     </div>
-                                    <button type="submit" class="btn btn-primary btn-white btn-lg">Notify me when ready!</button>
+                                    <button type="submit" class="btn btn-primary btn-white btn-lg">I want to be a beta tester!</button>
                                 </form>
                             </div>
                         </li>
@@ -157,28 +157,33 @@
                   <div class="col-md-8 col-md-offset-2 scrollpoint sp-effect2">
                     <p>
                         Android market share has now reached almost 75% (<a href="https://en.wikipedia.org/wiki/Android_(operating_system)#Market_share">source</a>) of the estimated total number of smartphones.
-                        Because of this, criminals are now focusing more and more on this platform, profiting also from the weak permission management implemented in Android. 
+                        Because of this, criminals are now focusing more and more on this platform, profiting also from the weak permission management implemented in Android.
                     </p>
                     <p>
                         The issue we are trying to address with this product is called "Application Overlay" and permits an attacker to draw on top of any window and application running on the infected device.
-                        Firstly malicious applications monitor which applications are started by the user on the infected system. 
+                        Firstly malicious applications monitor which applications are started by the user on the infected system.
                         Next, once they detected a sensible application (eBanking, VPN, ...), the malware will redraw an exact login screen on top of the legitimate one.
                         The user is incapable of distinguish the fake from the original and enters the credentials on the wrong dialog.
                         The malware generally upload the stolen credentials to its Command & Control server. To learn more on how this vulnerability works check the articles in the <a href="#press">press</a> section.
+                    </p>
+                    <p>
+                      Overlay attacks are known <a href="http://conference.hitb.org/hitbsecconf2011kul/materials/D1T1%20-%20Riley%20Hassell%20-%20Exploiting%20Androids%20for%20Fun%20and%20Profit.pdf">since 2011</a> and affect all Android versions up to Android 5.1.0 where the GET_TASKS permission has been made ineffective.
+                      According to the Android distribution of August 2015 shown in the chart below, around <strong>97.4%</strong> of devices is affected!
+                      <img src="img/droid_distribution_august2015.png" style="width:100%;padding-top:10px;"/>
                     </p>
                     <p>
                         To avoid such attacks, our application constantly monitor every user-interface (UI) change happening on the device.
                         Our detection engine will then check if the view element drawn on the screen is coming from the same package of the <strong>legitimate</strong> application started by the user.
                         If is not, our application will warn you about it and let you decide if you want to whitelist the potentially malicious application or uninstall it.
                         <strong>But careful, not every application which uses this feature want to steal your data.</strong>
-                        For example, Facebook Messenger application uses this to draw the last received messages on top of the screen.
+                        For example, Facebook Messenger application uses this to draw the "chat heads" on top of the screen.
                     </p>
                   </div>
                 </div>
               </div>
               </div>
             </section>
-            
+
             <section id="features">
                 <div class="container">
                     <div class="section-heading scrollpoint sp-effect3">
@@ -280,7 +285,7 @@
                     </div>
                 </div>
             </section>
-            
+
             <section id="example">
               <div class="container">
                 <div class="section-heading inverse scrollpoint sp-effect3">
@@ -307,9 +312,9 @@
                         <strong>Install</strong><br/>
                         First you need to download the last APK from the <a href="https://github.com/geeksonsecurity/android-overlay-malware-example/releases">project release page</a>.
                         If you prefer, you can clone the source and build the package yourself.
-                 
+
                         Since the package is not coming from Google Play, you need to enable the <i>"Unknown sources"</i> flag in the Security Settings of the device.
-                        This last step is only required if you are deploying to a real device, emulators normally allows install of untrusted apps by default.                        
+                        This last step is only required if you are deploying to a real device, emulators normally allows install of untrusted apps by default.
                         To install on a real device, you can issue the following command:
                         <pre># adb install -r android-overlay-malware-example-X_X.apk</pre>
                         or just upload/download it from a cloud storage and install it directly on the phone.
@@ -391,7 +396,7 @@
                         <a href="http://www.nes.fr/securitylab/?p=1865">NES Security Lab - Touchjacking Demonstration</a>
                       </li>
                       <li>
-                        <a href="http://www.ehackingnews.com/2015/04/tapjacking-in-android-devices-can-lead.html">E-Hacking News - Tapjacking in Android devices can lead to malware download</a>   
+                        <a href="http://www.ehackingnews.com/2015/04/tapjacking-in-android-devices-can-lead.html">E-Hacking News - Tapjacking in Android devices can lead to malware download</a>
                       </li>
                     </ul>
                   </div>
@@ -502,10 +507,10 @@
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        
+
         ga('create', 'UA-66639465-1', 'auto');
         ga('send', 'pageview');
-        
+
         </script>
     </body>
 </html>

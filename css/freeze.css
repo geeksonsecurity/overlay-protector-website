@@ -69,7 +69,7 @@ header .navbar-default ul.navbar-nav li a {
 }
 header .navbar-default ul.navbar-nav li a:after {
   content: '';
-  width: 32px;
+  width: 75%;
   background: none;
   height: 4px;
   position: absolute;
