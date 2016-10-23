@@ -1109,6 +1109,10 @@ section#press ul
 
 section#howitworks {
   font-size: 110%;
+}
+
+section#implementation {
+  font-size: 110%;
   background: url("../img/bk-freeze.jpg");
 }
 

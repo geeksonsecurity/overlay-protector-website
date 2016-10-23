@@ -71,7 +71,10 @@
                             <li><a href="#">home</a>
                             </li>
                             <li>
-                                <a href="#howitworks">how it works</a>
+                                <a href="#howitworks">introduction</a>
+                            </li>
+                            <li>
+                                <a href="#implementation">detection engine</a>
                             </li>
                             <li><a href="#features">features</a>
                             </li>
@@ -114,25 +117,14 @@
                                 <img src="img/nexus_isometric.png" alt="">
                             </div>
 
-                            <div class="tp-caption large_white_bold sft" data-x="500" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
+                            <div class="tp-caption large_white_bold sft" data-x="500" data-y="center" data-hoffset="0" data-voffset="-120" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
                                 Android
                             </div>
-                            <div class="tp-caption large_white_light sfr" data-x="500" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1400" data-easing="Power4.easeOut">
-
-                            </div>
-                            <div class="tp-caption large_white_light sfb" data-x="500" data-y="center" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1500" data-easing="Power4.easeOut">
+                            <div class="tp-caption large_white_light sfb" data-x="500" data-y="center" data-hoffset="0" data-voffset="-50" data-speed="1000" data-start="1500" data-easing="Power4.easeOut">
                                 Overlay Protector
                             </div>
-
-                            <div class="tp-caption sfb hidden-xs" data-x="500" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1000" data-start="1700" data-easing="Power4.easeOut">
-                                <a href="#howitworks" class="btn btn-primary inverse btn-lg">LEARN MORE</a>
-                            </div>
-                            <div class="tp-caption sfr hidden-xs" data-x="680" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1500" data-start="1900" data-easing="Power4.easeOut">
-                              <i>Coming soon to the Google Play Store!</i>
-                            </div>
-                            <div class="tp-caption sfr" data-x="500" data-y="center" data-hoffset="0" data-voffset="150" data-speed="1500" data-start="2100" data-easing="Power4.easeOut">
-
-                                    <a href="https://play.google.com/apps/testing/com.geeksonsecurity.android.overlayprotector.beta" type="submit" class="btn btn-primary btn-white btn-lg">I want to be a beta tester!</a>
+                            <div class="tp-caption sfb hidden-xs" data-x="500" data-y="center" data-hoffset="0" data-voffset="20" data-speed="1000" data-start="1700" data-easing="Power4.easeOut">
+                                <a href="https://github.com/geeksonsecurity/android-overlay-protection" class="btn btn-primary inverse btn-lg">Check it out on GitHub</a>
                             </div>
                         </li>
                     </ul>
@@ -144,9 +136,9 @@
             <section id="howitworks">
               <div class="container">
                 <div class="section-heading inverse scrollpoint sp-effect3">
-                  <h1>How it works</h1>
+                  <h1>Introduction</h1>
                   <div class="divider"></div>
-                  <p>How does our application protects you against overlay attacks?</p>
+                  <p>How can we prevent overlay attacks efficiently?</p>
                 </div>
                 <div class="row">
                   <div class="col-md-8 col-md-offset-2 scrollpoint sp-effect2">
@@ -164,7 +156,9 @@
                     <p>
                       Overlay attacks are known <a href="http://conference.hitb.org/hitbsecconf2011kul/materials/D1T1%20-%20Riley%20Hassell%20-%20Exploiting%20Androids%20for%20Fun%20and%20Profit.pdf">since 2011</a> and affect all Android versions up to Android 5.1.0 where the GET_TASKS permission has been made ineffective.
                       According to the Android distribution of August 2015 shown in the chart below, around <strong>97.4%</strong> of devices is affected!
-                      <img src="img/droid_distribution_august2015.png" style="width:100%;padding-top:10px;"/>
+                      <img src="img/droid_distribution_august2015.png" style="width:100%;padding-top:10px;padding-bottom:10px;"/>
+                      Nevertheless, cyber attackers found different ways to monitor running process using for example <code>UsageStatsManager</code>, <code>AccessibilityService</code> or by parsing <code>/proc/*/oom_score</code>.
+                      Someone else may just prompt fake view to the user at random time, without monitor the foreground application at all.
                     </p>
                     <p>
                         To avoid such attacks, our application constantly monitor every user-interface (UI) change happening on the device.
@@ -179,12 +173,41 @@
               </div>
             </section>
 
+            <section id="implementation">
+              <div class="container">
+                <div class="section-heading inverse scrollpoint sp-effect3">
+                  <h1>Detection Engine</h1>
+                  <div class="divider"></div>
+                  <p>Sneak peaks from the source code</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2 scrollpoint sp-effect2">
+                    We implemented two different kind of detection engines, to maximize code reuse we created an abstract class called <code>AbstractDetectionEngine</code> and is extended by the following implementation:
+                    <ul style="padding-top:10px;">
+                      <li> <code>BaseDetectionService</code>: For each <code>TYPE_WINDOW_STATE_CHANGED</code> event we perform two different checks:</li>
+                      <ul>
+                        <li>
+                          If the started activity has the <code>LAUNCH_SINGLE_INSTANCE</code> flag the activity must have a parent, if not raise a warning
+                        </li>
+                        <li>
+                          Otherwise we check the following boolean conditions: <code>_layoutClasses.contains(className) && !isActivity && !parentAvailable</code>, if all of these are met, we raise a warning
+                        </li>
+                      </ul>
+                    <li> <code>AdvancedDetectionService</code>: This engine uses a different approach. We monitor the current process and refresh it at each user tap (<code>TYPE_VIEW_CLICKED</code>) than, for each of the following events: <code>TYPE_WINDOWS_CHANGED, TYPE_WINDOW_CONTENT_CHANGED, TYPE_WINDOW_STATE_CHANGED</code>, we check if the event source match the current process package and, if not, we raise a warning.</li>
+                  </ul>
+                  You can switch the implementation during runtime in the <code>Settings</code> section of the application.
+                  </div>
+                </div>
+                </div>
+                </div>
+                </section>
+
             <section id="features">
                 <div class="container">
                     <div class="section-heading scrollpoint sp-effect3">
                         <h1>Features</h1>
                         <div class="divider"></div>
-                        <p>This is what you get!</p>
+                        <p>All the capabilities in one single shot!</p>
                     </div>
                     <div class="row">
                         <div class="col-md-4 col-sm-4 scrollpoint sp-effect1">
@@ -378,6 +401,9 @@
                 <div class="row">
                   <div class="col-md-8 col-md-offset-2 scrollpoint sp-effect2">
                     <ul>
+                      <li>
+                        <a href="https://www.fireeye.com/blog/threat-research/2016/06/latest-android-overlay-malware-spreading-in-europe.html">FireEye: Android Overlay Malware Spreading in Europe</a>
+                      </li>
                       <li>
                         <a href="http://www.cert.pl/news/10180">CERT: Android Malware stealing GMail credentials (with video)</a>
                       </li>
